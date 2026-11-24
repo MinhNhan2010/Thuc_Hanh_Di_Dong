@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Thuc_Hanh_Di_Dong</string>
+
+    <!-- ⭐ QUAN TRỌNG [Buổi 2 - BT11]: Mảng chuỗi tĩnh (string-array) dùng làm nguồn dữ liệu cho ListView thông qua getResources().getStringArray(R.array.mon_hoc_array) -->
+    <string-array name="mon_hoc_array">
+        <item>Lập trình Android</item>
+        <item>Lập trình Java</item>
+        <item>Cơ sở dữ liệu</item>
+        <item>Mạng máy tính</item>
+        <item>Cấu trúc dữ liệu</item>
+        <item>Hệ điều hành</item>
+        <item>Trí tuệ nhân tạo</item>
+        <item>Lập trình Web</item>
+        <item>An toàn thông tin</item>
+        <item>Phân tích thiết kế hệ thống</item>
+    </string-array>
+</resources>

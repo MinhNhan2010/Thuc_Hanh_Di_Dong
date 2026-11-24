@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#f5f5f5">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bài 1: Toast và tùy chỉnh Toast"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:gravity="center"
+        android:padding="8dp" />
+
+    <!-- ⭐ QUAN TRỌNG [Buổi 2 - BT01]: Các Button dùng để minh họa các chế độ hiển thị Toast (SHORT, LONG, Custom View, Gravity TOP/CENTER) -->
+    <!-- android:textAllCaps="false" giúp giữ nguyên chữ hoa/thường trên nút thay vì tự động viết hoa toàn bộ -->
+    <Button
+        android:id="@+id/btnToastShort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Toast SHORT (2 giây)"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btnToastLong"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Toast LONG (3.5 giây)"
+        android:textAllCaps="false" />
+
+    <!-- ⭐ QUAN TRỌNG: Nút này sẽ nạp layout tùy chỉnh R.layout.buoi2_bai01_item_toast vào Toast -->
+    <Button
+        android:id="@+id/btnToastCustom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Toast tùy chỉnh (Custom)"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btnToastTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Toast ở trên (TOP)"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/btnToastCenter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Toast ở giữa (CENTER)"
+        android:textAllCaps="false" />
+
+</LinearLayout>

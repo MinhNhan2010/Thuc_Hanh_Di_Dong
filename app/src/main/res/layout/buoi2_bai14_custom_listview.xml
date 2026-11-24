@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#f5f5f5">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bài 14: Custom ListView"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="8dp" />
+
+    <TextView
+        android:id="@+id/tvSelected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chọn một phần tử..."
+        android:textSize="16sp"
+        android:textColor="#1565C0"
+        android:textStyle="bold"
+        android:padding="12dp"
+        android:background="#BBDEFB"
+        android:layout_marginTop="8dp" />
+
+    <!--  QUAN TRỌNG [Buổi 2 - BT14]: ListView này sử dụng Custom Adapter để vẽ từng dòng theo layout buoi2_bai14_item_custom_list.xml -->
+    <ListView
+        android:id="@+id/lvCustom"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:divider="#BDBDBD"
+        android:dividerHeight="1dp" />
+
+</LinearLayout>

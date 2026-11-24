@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ⭐ QUAN TRỌNG [Buổi 4 - BT19 ContextMenu Class]: Menu ngữ cảnh khi nhấn giữ vào 1 Lớp học trên ListView -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mnuViewStudentsInClass"
+        android:title="👨‍🎓 Xem danh sách sinh viên" />
+    <item
+        android:id="@+id/mnuAddStudentToClass"
+        android:title="➕ Thêm sinh viên vào lớp" />
+    <item
+        android:id="@+id/mnuEditClass"
+        android:title="✏️ Sửa lớp học" />
+    <item
+        android:id="@+id/mnuDeleteClass"
+        android:title="🗑️ Xóa lớp học" />
+</menu>

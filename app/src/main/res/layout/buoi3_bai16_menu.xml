@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#f5f5f5">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bài 16: Quản lý công việc"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="4dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="(Long press → ContextMenu | Menu → Options)"
+        android:textSize="12sp"
+        android:textColor="#888"
+        android:gravity="center"
+        android:paddingBottom="8dp" />
+
+    <EditText
+        android:id="@+id/edtCongViec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập tên công việc" />
+
+    <!-- ⭐ QUAN TRỌNG [Buổi 3 - BT16]: Hai nút mở DatePickerDialog (chọn ngày) và TimePickerDialog (chọn giờ) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="4dp">
+
+        <Button
+            android:id="@+id/btnDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="📅 Date"
+            android:textAllCaps="false"
+            android:layout_marginEnd="4dp" />
+
+        <Button
+            android:id="@+id/btnTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="⏰ Time"
+            android:textAllCaps="false"
+            android:layout_marginStart="4dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvDateTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hạn: chưa chọn"
+        android:textSize="14sp"
+        android:textColor="#E65100"
+        android:padding="8dp"
+        android:layout_marginTop="4dp" />
+
+    <CheckBox
+        android:id="@+id/chkHoanThanh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đã hoàn thành" />
+
+    <Button
+        android:id="@+id/btnThemCV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="➕ Thêm công việc"
+        android:textAllCaps="false"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tổng: 0 công việc"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#1565C0"
+        android:padding="8dp"
+        android:background="#BBDEFB"
+        android:layout_marginTop="8dp" />
+
+    <!-- ⭐ QUAN TRỌNG: ListView được đăng ký ContextMenu thông qua hàm registerForContextMenu(lvCongViec) trong Java (nhấn giữ dòng để mở menu ngữ cảnh) -->
+    <ListView
+        android:id="@+id/lvCongViec"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="4dp"
+        android:divider="#BDBDBD"
+        android:dividerHeight="1dp" />
+
+</LinearLayout>

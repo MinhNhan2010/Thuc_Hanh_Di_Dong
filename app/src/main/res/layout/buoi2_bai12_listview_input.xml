@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#f5f5f5">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bài 12: ListView - ArrayList + Nhập"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="8dp" />
+
+    <!--  QUAN TRỌNG [Buổi 2 - BT12]: Cụm nhập liệu động gồm EditText (layout_weight="1" giãn hết chiều ngang) và Button "Nhập" -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <EditText
+            android:id="@+id/edtNhapTen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Nhập tên" />
+
+        <Button
+            android:id="@+id/btnNhap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nhập"
+            android:layout_marginStart="8dp"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvSelected"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Chọn một phần tử..."
+        android:textSize="16sp"
+        android:textColor="#1565C0"
+        android:textStyle="bold"
+        android:padding="12dp"
+        android:background="#BBDEFB"
+        android:layout_marginTop="8dp" />
+
+    <!--  QUAN TRỌNG: ListView cập nhật dữ liệu động từ ArrayList sau khi gọi adapter.notifyDataSetChanged() -->
+    <ListView
+        android:id="@+id/lvDanhSach"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:divider="#BDBDBD"
+        android:dividerHeight="1dp" />
+
+</LinearLayout>

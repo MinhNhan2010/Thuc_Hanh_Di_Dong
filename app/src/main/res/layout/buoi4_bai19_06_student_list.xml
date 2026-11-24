@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#f5f5f5">
+
+    <Button
+        android:id="@+id/btnAddStudent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="➕ Thêm sinh viên mới"
+        android:textAllCaps="false" />
+
+    <!-- ⭐ QUAN TRỌNG [Buổi 4 - BT19 StudentList]: Thanh tìm kiếm đa năng (tìm theo Mã SV, Họ tên, SĐT, Email, Địa chỉ) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="6dp">
+
+        <EditText
+            android:id="@+id/edtSearchStudent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="🔍 Tìm mã, tên, SĐT, địa chỉ..."
+            android:singleLine="true"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnClearSearchStudent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xóa"
+            android:textAllCaps="false"
+            android:layout_marginStart="4dp" />
+    </LinearLayout>
+
+    <!-- ⭐ QUAN TRỌNG: Kết hợp 2 Spinner: Lọc theo Lớp học (spnFilterClass) và Sắp xếp theo tiêu chí (spnSortStudent) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lớp:"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:layout_marginEnd="4dp" />
+
+        <Spinner
+            android:id="@+id/spnFilterClass"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xếp:"
+            android:textStyle="bold"
+            android:textSize="13sp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="4dp" />
+
+        <Spinner
+            android:id="@+id/spnSortStudent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvStudentCount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Danh sách sinh viên"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="#1565C0"
+        android:padding="8dp"
+        android:background="#BBDEFB"
+        android:layout_marginTop="6dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="💡 Chạm vào SV để xem chi tiết / Sửa / Xóa nhanh • Nhấn giữ để mở Menu"
+        android:textSize="12sp"
+        android:textColor="#666666"
+        android:paddingVertical="4dp" />
+
+    <!-- ⭐ QUAN TRỌNG: ListView hiển thị danh sách sinh viên qua MyAdapterStudent (buoi4_bai19_08_item_student) -->
+    <ListView
+        android:id="@+id/lvStudent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="4dp"
+        android:divider="#BDBDBD"
+        android:dividerHeight="1dp" />
+
+</LinearLayout>

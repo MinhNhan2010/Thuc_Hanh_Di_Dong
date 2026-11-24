@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Thuc_Hanh_Di_Dong">
+
+        <!-- ⭐ QUAN TRỌNG: Activity khởi chạy đầu tiên của ứng dụng bắt buộc có android:exported="true"
+             và bộ lọc <intent-filter> chứa ACTION_MAIN + CATEGORY_LAUNCHER -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="Thực Hành Di Động - Menu chính"
+            android:theme="@style/Theme.Thuc_Hanh_Di_Dong"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- ===== BUỔI 1: LAYOUTS & BẮT SỰ KIỆN ===== -->
+        <!-- ⭐ QUAN TRỌNG: Mọi Activity trong dự án bắt buộc phải đăng ký thẻ <activity> tại đây, nếu không khi gọi startActivity() sẽ bị văng lỗi ActivityNotFoundException -->
+
+        <!-- Bài 01: LinearLayout -->
+        <activity
+            android:name=".buoi1.Bai01LinearLayoutActivity"
+            android:label="Buổi 1 - Bài 01: LinearLayout" />
+
+        <!-- Bài 02: RelativeLayout -->
+        <activity
+            android:name=".buoi1.Bai02RelativeLayoutActivity"
+            android:label="Buổi 1 - Bài 02: RelativeLayout" />
+
+        <!-- Bài 03: TableLayout -->
+        <activity
+            android:name=".buoi1.Bai03TableLayoutActivity"
+            android:label="Buổi 1 - Bài 03: TableLayout" />
+
+        <!-- Bài 04: OnClick in XML -->
+        <activity
+            android:name=".buoi1.Bai04OnClickXmlActivity"
+            android:label="Buổi 1 - Bài 04: OnClick in XML" />
+
+        <!-- Bài 05: Anonymous Listener -->
+        <activity
+            android:name=".buoi1.Bai05AnonymousListenerActivity"
+            android:label="Buổi 1 - Bài 05: Anonymous Listener" />
+
+        <!-- Bài 06: Interface OnClickListener -->
+        <activity
+            android:name=".buoi1.Bai06InterfaceOnClickActivity"
+            android:label="Buổi 1 - Bài 06: Interface OnClickListener" />
+
+        <!-- ===== BUỔI 2: ANDROID WIDGETS ===== -->
+
+        <!-- BT01: Toast -->
+        <activity
+            android:name=".buoi2.Bai01ToastActivity"
+            android:label="Buổi 2 - BT01: Toast" />
+
+        <!-- BT02: Alert Dialog -->
+        <activity
+            android:name=".buoi2.Bai02AlertDialogActivity"
+            android:label="Buổi 2 - BT02: Alert Dialog" />
+
+        <!-- BT03: Các kiểu sự kiện -->
+        <activity
+            android:name=".buoi2.Bai03EventTypesActivity"
+            android:label="Buổi 2 - BT03: Các kiểu sự kiện" />
+
+        <!-- BT04: Chuyển đổi nhiệt độ -->
+        <activity
+            android:name=".buoi2.Bai04TemperatureActivity"
+            android:label="Buổi 2 - BT04: Nhiệt độ C↔F" />
+
+        <!-- BT07: Alert Dialog + Đăng nhập -->
+        <activity
+            android:name=".buoi2.Bai07AlertLoginActivity"
+            android:label="Buổi 2 - BT07: Đăng nhập" />
+
+        <!-- BT08: Năm Âm lịch -->
+        <activity
+            android:name=".buoi2.Bai08NamAmLichActivity"
+            android:label="Buổi 2 - BT08: Năm Âm lịch" />
+
+        <!-- BT09: Thông tin cá nhân -->
+        <activity
+            android:name=".buoi2.Bai09ThongTinActivity"
+            android:label="Buổi 2 - BT09: Thông tin cá nhân" />
+
+        <!-- BT11: ListView String-Array -->
+        <activity
+            android:name=".buoi2.Bai11ListViewActivity"
+            android:label="Buổi 2 - BT11: ListView" />
+
+        <!-- BT12: ListView ArrayList -->
+        <activity
+            android:name=".buoi2.Bai12ListViewInputActivity"
+            android:label="Buổi 2 - BT12: ListView + Nhập" />
+
+        <!-- BT14: Custom ListView -->
+        <activity
+            android:name=".buoi2.Bai14CustomListViewActivity"
+            android:label="Buổi 2 - BT14: Custom ListView" />
+
+        <!-- BT15: Spinner + ListView -->
+        <activity
+            android:name=".buoi2.Bai15SpinnerActivity"
+            android:label="Buổi 2 - BT15: Spinner + ListView" />
+
+        <!-- ===== BUỔI 3: MENU, CONTEXTMENU VÀ INTENT ===== -->
+
+        <!-- BT16: Menu + ContextMenu -->
+        <activity
+            android:name=".buoi3.Bai16MenuActivity"
+            android:label="Buổi 3 - BT16: Quản lý CV" />
+
+        <!-- BT17: Intent - Quản lý Album -->
+        <activity
+            android:name=".buoi3.Bai17MainActivity"
+            android:label="Buổi 3 - BT17: QL Bài hát" />
+
+        <!-- ⭐ QUAN TRỌNG [Buổi 3 - BT17]: android:theme="@android:style/Theme.DeviceDefault.Light.Dialog"
+             biến Activity bình thường thành một cửa sổ hộp thoại nổi (Dialog Activity) -->
+        <activity
+            android:name=".buoi3.Bai17AddAlbumActivity"
+            android:label="Thêm Album"
+            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" />
+
+        <activity
+            android:name=".buoi3.Bai17AlbumListActivity"
+            android:label="Danh sách Album" />
+
+        <activity
+            android:name=".buoi3.Bai17EditAlbumActivity"
+            android:label="Sửa Album"
+            android:theme="@android:style/Theme.DeviceDefault.Light.Dialog" />
+
+        <activity
+            android:name=".buoi3.Bai17SongsActivity"
+            android:label="QL Bài hát" />
+
+        <!-- BT18: Intent - Quản lý nhân sự -->
+        <activity
+            android:name=".buoi3.Bai18NhanSuActivity"
+            android:label="Buổi 3 - BT18: QL Nhân sự" />
+
+        <activity
+            android:name=".buoi3.Bai18EditNVActivity"
+            android:label="Thêm/Sửa NV" />
+
+        <!-- ===== BUỔI 4: KẾT NỐI CƠ SỞ DỮ LIỆU SQLITE (QUẢN LÝ SINH VIÊN) ===== -->
+
+        <!-- Đăng nhập SQLite -->
+        <activity
+            android:name=".buoi4.Bai19LoginActivity"
+            android:label="Buổi 4 - BT19: Đăng nhập hệ thống" />
+
+        <!-- Menu chính quản lý sinh viên -->
+        <activity
+            android:name=".buoi4.Bai19MainMenuActivity"
+            android:label="QL Sinh Viên - Menu chính" />
+
+        <!-- Quản lý lớp học -->
+        <activity
+            android:name=".buoi4.Bai19ClassListActivity"
+            android:label="Danh sách lớp học" />
+
+        <activity
+            android:name=".buoi4.Bai19InsertClassActivity"
+            android:label="Thêm lớp học" />
+
+        <activity
+            android:name=".buoi4.Bai19EditClassActivity"
+            android:label="Sửa lớp học" />
+
+        <!-- Quản lý sinh viên -->
+        <activity
+            android:name=".buoi4.Bai19StudentListActivity"
+            android:label="Danh sách sinh viên" />
+
+        <activity
+            android:name=".buoi4.Bai19InsertStudentActivity"
+            android:label="Thêm sinh viên" />
+
+        <activity
+            android:name=".buoi4.Bai19EditStudentActivity"
+            android:label="Sửa sinh viên" />
+
+    </application>
+
+</manifest>

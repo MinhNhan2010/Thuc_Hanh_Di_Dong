@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ⭐ QUAN TRỌNG [Buổi 2 - BT14]: Layout của 1 dòng (Item Row) trong Custom ListView: kết hợp ImageView + TextView nằm ngang -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:gravity="center_vertical">
+
+    <!-- ⭐ QUAN TRỌNG: ImageView hiển thị icon riêng cho từng dòng (được gán trong getView của Custom Adapter) -->
+    <ImageView
+        android:id="@+id/imgIcon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:contentDescription="@null"
+        android:layout_marginEnd="12dp" />
+
+    <!-- ⭐ QUAN TRỌNG: TextView hiển thị nội dung văn bản của dòng -->
+    <TextView
+        android:id="@+id/txtContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:textColor="#333333" />
+
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#f5f5f5">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bài 4: Chuyển đổi nhiệt độ C↔F"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="8dp" />
+
+    <!-- ⭐ QUAN TRỌNG [Buổi 2 - BT04]: android:inputType="numberDecimal|numberSigned" cho phép nhập cả số thực (dấu chấm thập phân) lẫn số âm (nhiệt độ dưới 0 độ) -->
+    <EditText
+        android:id="@+id/edtNhietDo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập nhiệt độ"
+        android:inputType="numberDecimal|numberSigned"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/tvKetQua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kết quả: "
+        android:textSize="20sp"
+        android:textColor="#FF5722"
+        android:textStyle="bold"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:background="#FFF3E0" />
+
+    <!-- ⭐ QUAN TRỌNG: Đặt 2 nút nằm ngang cân đều 50%-50% bằng LinearLayout horizontal + layout_width="0dp" + layout_weight="1" -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <Button
+            android:id="@+id/btnToC"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Convert To Celsius"
+            android:textAllCaps="false"
+            android:layout_marginEnd="4dp" />
+
+        <Button
+            android:id="@+id/btnToF"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Convert To Fahrenheit"
+            android:textAllCaps="false"
+            android:layout_marginStart="4dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Clear"
+        android:background="#9E9E9E"
+        android:textColor="#ffffff" />
+
+</LinearLayout>

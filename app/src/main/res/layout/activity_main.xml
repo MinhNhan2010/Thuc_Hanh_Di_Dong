@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BUỔI 1: LAYOUT VÀ SỰ KIỆN ANDROID"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#1976D2"
+            android:gravity="center"
+            android:paddingBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GV: Nguyễn Hữu Vĩnh - ĐH Thủ Dầu Một"
+            android:textSize="14sp"
+            android:textColor="#666666"
+            android:gravity="center"
+            android:paddingBottom="16dp" />
+
+        <!-- Phần Layout -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PHẦN LAYOUT"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#D32F2F"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. LinearLayout"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2. RelativeLayout"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnTableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3. TableLayout"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Phần Sự kiện -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PHẦN SỰ KIỆN"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#D32F2F"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnOnClickXml"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4. OnClick in XML"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnAnonymousListener"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="5. Inline Anonymous Listener" />
+
+        <Button
+            android:id="@+id/btnInterfaceOnClick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="6. Interface OnClickListener"
+            android:layout_marginBottom="8dp" />
+
+        <!-- ===== BUỔI 2: ANDROID WIDGETS ===== -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#BDBDBD"
+            android:layout_marginVertical="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BUỔI 2: ANDROID WIDGETS"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#388E3C"
+            android:gravity="center"
+            android:paddingBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnBai1Toast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BT1. Toast và tùy chỉnh Toast"
+            android:layout_marginBottom="8dp"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnBai2AlertDialog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BT2. Alert Dialog"
+            android:layout_marginBottom="8dp"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnBai3EventTypes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BT3. Các kiểu lập trình sự kiện"
+            android:layout_marginBottom="8dp"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnBai4Temperature"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BT4. Chuyển đổi nhiệt độ C↔F"
+            android:layout_marginBottom="8dp"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnBai7AlertLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BT7. Alert Dialog + Đăng nhập"
+            android:layout_marginBottom="8dp"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnBai8NamAmLich"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BT8. Đổi năm Dương → Âm lịch"
+            android:layout_marginBottom="8dp"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnBai9ThongTin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BT9. Form thông tin cá nhân"
+            android:layout_marginBottom="8dp"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnBai11ListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BT11. ListView (String-Array)"
+            android:layout_marginBottom="8dp"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnBai12ListViewInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BT12. ListView (ArrayList + Nhập)"
+            android:layout_marginBottom="8dp"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnBai14CustomListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BT14. Custom ListView"
+            android:layout_marginBottom="8dp"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnBai15Spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BT15. Spinner + ListView"
+            android:layout_marginBottom="8dp"
+            android:textAllCaps="false" />
+
+        <!-- ===== BUỔI 3: MENU, CONTEXTMENU VÀ INTENT ===== -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#BDBDBD"
+            android:layout_marginVertical="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BUỔI 3: MENU, CONTEXT MENU &amp; INTENT"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#E65100"
+            android:gravity="center"
+            android:paddingBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnBai16Menu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BT16. Menu + ContextMenu (CV)"
+            android:layout_marginBottom="8dp"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnBai17Intent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BT17. Intent - QL Album/Bài hát"
+            android:layout_marginBottom="8dp"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/btnBai18NhanSu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BT18. Intent - QL Nhân sự"
+            android:layout_marginBottom="8dp"
+            android:textAllCaps="false" />
+
+        <!-- ===== BUỔI 4: KẾT NỐI CƠ SỞ DỮ LIỆU (SQLITE) ===== -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#BDBDBD"
+            android:layout_marginVertical="12dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BUỔI 4: KẾT NỐI CƠ SỞ DỮ LIỆU (SQLITE)"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#6A1B9A"
+            android:gravity="center"
+            android:paddingBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnBai19Database"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="BT19. Quản lý Sinh viên (SQLite)"
+            android:layout_marginBottom="8dp"
+            android:textAllCaps="false"
+            android:backgroundTint="#6A1B9A"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+</ScrollView>
+

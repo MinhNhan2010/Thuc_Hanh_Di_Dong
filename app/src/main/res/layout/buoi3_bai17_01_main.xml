@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center"
+    android:background="#f5f5f5">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🎵 Bài 17: Quản lý bài hát"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="16dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="(Intent - Explicit/Implicit)"
+        android:textSize="14sp"
+        android:textColor="#888"
+        android:gravity="center"
+        android:paddingBottom="24dp" />
+
+    <!-- ⭐ QUAN TRỌNG [Buổi 3 - BT17]: Ba nút đầu tiên sử dụng Explicit Intent (Intent tường minh) để mở các Activity con trong cùng ứng dụng -->
+    <Button
+        android:id="@+id/btnThemAlbum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="➕ Thêm Album"
+        android:textAllCaps="false"
+        android:layout_marginBottom="12dp"
+        android:padding="14dp" />
+
+    <Button
+        android:id="@+id/btnXemAlbum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📋 Xem danh sách Album"
+        android:textAllCaps="false"
+        android:layout_marginBottom="12dp"
+        android:padding="14dp" />
+
+    <Button
+        android:id="@+id/btnQuanLyBaiHat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🎶 Quản lý bài hát"
+        android:textAllCaps="false"
+        android:layout_marginBottom="12dp"
+        android:padding="14dp" />
+
+    <!-- ⭐ QUAN TRỌNG: Nút này minh họa Implicit Intent (Intent ngầm định): gọi Intent.ACTION_VIEW kèm Uri.parse("https://...") để mở trình duyệt Web của hệ thống -->
+    <Button
+        android:id="@+id/btnImplicitIntent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🌐 Implicit Intent (Mở Web)"
+        android:textAllCaps="false"
+        android:layout_marginBottom="12dp"
+        android:padding="14dp" />
+
+</LinearLayout>

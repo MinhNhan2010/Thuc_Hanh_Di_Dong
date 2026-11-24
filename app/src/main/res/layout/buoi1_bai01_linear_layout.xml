@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ⭐ QUAN TRỌNG [Buổi 1 - Bài 01]: ScrollView dùng để cuộn màn hình khi nội dung dài hơn chiều cao thiết bị -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <!-- ⭐ QUAN TRỌNG: ScrollView chỉ được phép chứa DUY NHẤT 1 ViewGroup con trực tiếp (ở đây là LinearLayout) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. LinearLayout"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#1976D2"
+            android:gravity="center"
+            android:paddingBottom="16dp" />
+
+        <!-- a) orientation = vertical -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="a) android:orientation=&quot;vertical&quot;"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <!-- ⭐ QUAN TRỌNG: android:orientation="vertical" xếp các View con từ TRÊN xuống DƯỚI -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#AF5656" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#28C6A6" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#7C145F" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#C18936" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#062001" />
+        </LinearLayout>
+
+        <!-- b) orientation = horizontal -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="b) android:orientation=&quot;horizontal&quot;"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <!-- ⭐ QUAN TRỌNG: android:orientation="horizontal" xếp các View con từ TRÁI sang PHẢI -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="#AF5656" />
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="#28C6A6" />
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="#7C145F" />
+
+            <View
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:background="#062001" />
+        </LinearLayout>
+
+        <!-- c) layout_weight không có weightSum (1:4:2 = 7) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="c) layout_weight không có weightSum (1:4:2)"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <!-- ⭐ QUAN TRỌNG: Chia tỷ lệ bằng layout_weight trong chiều ngang (horizontal):
+             Đặt android:layout_width="0dp" để Android tính độ rộng hoàn toàn theo tỷ lệ 1 : 4 : 2 (tổng = 7 phần) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#AF5656" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="4"
+                android:background="#28C6A6" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="#7C145F" />
+        </LinearLayout>
+
+        <!-- d) weightSum = 10 (5:2:1, còn 2/10 trống) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="d) weightSum=10, weight (5:2:1), còn 2/10 trống"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <!-- ⭐ QUAN TRỌNG: android:weightSum="10" cố định tổng số phần là 10.
+             Trong chiều dọc (vertical), đặt android:layout_height="0dp" và truyền layout_weight (5 + 2 + 1 = 8/10, dư 2/10 trống) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:orientation="vertical"
+            android:weightSum="10"
+            android:layout_marginBottom="16dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                android:background="#AF5656" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:background="#28C6A6" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="#7C145F" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

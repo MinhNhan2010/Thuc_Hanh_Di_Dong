@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ⭐ QUAN TRỌNG [Buổi 4 - BT19 Item Class]: Layout của 1 dòng Lớp học trong Custom Adapter (MyAdapterClass) gồm 3 cột ngang: Mã lớp - Tên lớp - Sĩ số -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="12dp">
+
+    <!-- Cột 1: Mã lớp (độ rộng cố định 85dp để các dòng thẳng hàng) -->
+    <TextView
+        android:id="@+id/txtclasscode"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="#1565C0" />
+
+    <!-- ⭐ QUAN TRỌNG: Cột 2: Tên lớp dùng layout_width="0dp" + layout_weight="1" để co giãn linh hoạt chiếm phần không gian ở giữa -->
+    <TextView
+        android:id="@+id/txtclassname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="14sp"
+        android:textColor="#212121"
+        android:paddingHorizontal="6dp" />
+
+    <!-- Cột 3: Sĩ số thực tế / Sĩ số tối đa (đổi màu xanh/đỏ động trong MyAdapterClass) -->
+    <TextView
+        android:id="@+id/txtclassnumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:textColor="#2E7D32"
+        android:gravity="end" />
+
+</LinearLayout>

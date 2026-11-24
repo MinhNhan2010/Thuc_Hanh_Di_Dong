@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ⭐ QUAN TRỌNG [Buổi 4 - BT19 Insert/Edit Student]: Layout dùng chung cho cả Thêm Sinh Viên (Bai19InsertStudentActivity) và Sửa Sinh Viên (Bai19EditStudentActivity) -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/txtLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thêm sinh viên"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mã lớp:" />
+
+        <!-- ⭐ QUAN TRỌNG: Spinner lấy danh sách Mã Lớp từ bảng LopHoc trong SQLite (khóa ngoại maLop) -->
+        <Spinner
+            android:id="@+id/spnClassCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/btn_dropdown" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mã sinh viên:"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/edtStudentCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập mã sinh viên" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên sinh viên:"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/edtStudentName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập tên sinh viên" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Giới tính:"
+            android:layout_marginTop="8dp" />
+
+        <RadioGroup
+            android:id="@+id/rgGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rdiMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nam"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rdiFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nữ" />
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ngày sinh:"
+            android:layout_marginTop="8dp" />
+
+        <!-- ⭐ QUAN TRỌNG: Đặt android:focusable="false" + android:inputType="none" để chặn bàn phím ảo bật lên, buộc người dùng chạm vào để mở DatePickerDialog chọn ngày sinh chuẩn dd/MM/yyyy -->
+        <EditText
+            android:id="@+id/edtStudentBirthday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:inputType="none"
+            android:hint="Chạm để chọn ngày sinh (dd/MM/yyyy)" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Điểm trung bình (Hệ 10):"
+            android:layout_marginTop="8dp" />
+
+        <!-- ⭐ QUAN TRỌNG: Sử dụng inputType chuẩn cho từng loại dữ liệu: numberDecimal (Điểm TB), phone (Số điện thoại), textEmailAddress (Email) -->
+        <EditText
+            android:id="@+id/edtStudentGPA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal"
+            android:hint="Nhập điểm TB (0.0 - 10.0)" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Số điện thoại:"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/edtStudentPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            android:hint="Nhập số điện thoại (VD: 0901234567)" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email:"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/edtStudentEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:hint="Nhập địa chỉ email" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Địa chỉ:"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/edtStudentAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập địa chỉ" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="💾 Lưu"
+                android:textAllCaps="false"
+                android:layout_marginEnd="4dp" />
+
+            <Button
+                android:id="@+id/btnClear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🔄 Xóa trắng"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnClose"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="✖ Đóng"
+                android:textAllCaps="false"
+                android:layout_marginStart="4dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

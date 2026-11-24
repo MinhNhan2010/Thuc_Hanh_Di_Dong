@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ⭐ QUAN TRỌNG [Buổi 1 - Bài 03]: TableLayout bố cục dạng bảng (Hàng & Cột)
+     - android:stretchColumns="*" giúp tự động kéo giãn đều tất cả các cột lấp đầy chiều ngang màn hình -->
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/TableLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    android:background="#FFFFFF"
+    android:stretchColumns="*">
+
+    <!-- ⭐ QUAN TRỌNG: Mỗi thẻ <TableRow> tương ứng với 1 dòng trong bảng -->
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- ⭐ QUAN TRỌNG: android:layout_span="4" gộp 4 cột lại thành 1 ô tiêu đề rộng -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3. TableLayout"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#1976D2"
+            android:gravity="center"
+            android:layout_span="4"
+            android:paddingBottom="16dp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!-- Cột 0: Nhãn URL -->
+        <TextView
+            android:id="@+id/tvURL"
+            android:text="URL"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:gravity="center_vertical" />
+
+        <!-- ⭐ QUAN TRỌNG: Cột 1..3: Ô nhập liệu gộp 3 cột (layout_span="3") -->
+        <EditText
+            android:id="@+id/edtURL"
+            android:layout_span="3"
+            android:hint="https://tdmu.edu.vn"
+            android:textColor="#000000" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="User"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:gravity="center_vertical" />
+
+        <EditText
+            android:layout_span="3"
+            android:hint="Nhập tên đăng nhập"
+            android:textColor="#000000" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Pass"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:gravity="center_vertical" />
+
+        <EditText
+            android:layout_span="3"
+            android:hint="Nhập mật khẩu"
+            android:inputType="textPassword"
+            android:textColor="#000000" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!-- ⭐ QUAN TRỌNG: android:layout_column="2" đẩy nút Ok nhảy sang cột chỉ số 2 (bỏ trống cột 0 và cột 1) -->
+        <Button
+            android:id="@+id/btnOK"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:text="Ok" />
+
+        <!-- Cột 3 (nằm ngay sau cột 2) -->
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel" />
+    </TableRow>
+
+</TableLayout>

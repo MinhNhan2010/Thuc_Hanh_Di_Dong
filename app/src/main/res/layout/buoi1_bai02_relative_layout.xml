@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2. RelativeLayout"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#1976D2"
+            android:gravity="center"
+            android:paddingBottom="16dp" />
+
+        <!-- Ví dụ 1: layout_below - Username nằm dưới TextView -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ví dụ 1: layout_below"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <!-- ⭐ QUAN TRỌNG [Buổi 1 - Bài 02]: RelativeLayout định vị các View dựa trên quan hệ tương đối (với View khác hoặc với khung cha) -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp">
+
+            <!-- ⭐ QUAN TRỌNG: Trong RelativeLayout, View làm mốc bắt buộc phải có android:id="@+id/..." -->
+            <TextView
+                android:id="@+id/tvUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+
+            <!-- ⭐ QUAN TRỌNG: android:layout_below="@id/tvUsername" đặt EditText nằm ngay phía dưới tvUsername -->
+            <EditText
+                android:id="@+id/edtUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvUsername"
+                android:hint="Nhập tên đăng nhập"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/tvPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_below="@id/edtUsername"
+                android:layout_marginTop="8dp" />
+
+            <EditText
+                android:id="@+id/edtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvPassword"
+                android:hint="Nhập mật khẩu"
+                android:inputType="textPassword"
+                android:textColor="#000000" />
+        </RelativeLayout>
+
+        <!-- Ví dụ 2: layout_toRightOf -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ví dụ 2: layout_toRightOf"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/tvUser2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Username"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_centerVertical="true" />
+
+            <!-- ⭐ QUAN TRỌNG: android:layout_toRightOf="@id/tvUser2" đặt EditText nằm bên phải nhãn tvUser2 -->
+            <EditText
+                android:id="@+id/edtUser2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/tvUser2"
+                android:layout_marginLeft="10dp"
+                android:hint="Nhập tên đăng nhập"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/tvPass2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Password"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_below="@id/edtUser2"
+                android:layout_marginTop="8dp" />
+
+            <!-- ⭐ QUAN TRỌNG: Kết hợp đồng thời 2 ràng buộc: vừa nằm dưới edtUser2 (layout_below), vừa nằm bên phải tvPass2 (layout_toRightOf) -->
+            <EditText
+                android:id="@+id/edtPass2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edtUser2"
+                android:layout_toRightOf="@id/tvPass2"
+                android:layout_marginLeft="10dp"
+                android:hint="Nhập mật khẩu"
+                android:inputType="textPassword"
+                android:textColor="#000000" />
+        </RelativeLayout>
+
+        <!-- Ví dụ 3: alignParentRight -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ví dụ 3: layout_alignParentRight"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp">
+
+            <View
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="#2C8291" />
+
+            <!-- ⭐ QUAN TRỌNG: android:layout_alignParentRight="true" neo View sát vào cạnh phải của RelativeLayout cha -->
+            <View
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentRight="true"
+                android:background="#AF5656" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

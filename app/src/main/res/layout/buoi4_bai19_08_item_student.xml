@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ⭐ QUAN TRỌNG [Buổi 4 - BT19 Item Student]: Layout của 1 dòng Sinh viên trong Custom Adapter (MyAdapterStudent) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <!-- ⭐ QUAN TRỌNG: ImageView bên trái hiển thị ảnh đại diện thay đổi động theo Giới tính (Nam / Nữ) trong MyAdapterStudent -->
+    <ImageView
+        android:id="@+id/imgStudent"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="@null"
+        android:src="@android:drawable/ic_menu_myplaces"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="10dp" />
+
+    <!-- Khối thông tin chi tiết bên phải (chiếm phần diện tích còn lại với layout_width="0dp" + layout_weight="1") -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <!-- Dòng 1: Mã SV + Họ tên (bên trái) và Điểm TB + Xếp loại (bên phải) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/txtStudentName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="#1565C0" />
+
+            <TextView
+                android:id="@+id/txtStudentGPA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="2dp"
+                android:textColor="#2E7D32" />
+        </LinearLayout>
+
+        <!-- Dòng 2: Mã lớp -->
+        <TextView
+            android:id="@+id/txtStudentClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="#E65100" />
+
+        <!-- Dòng 3: Giới tính & Ngày sinh -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtStudentGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="#555"
+                android:layout_marginEnd="12dp" />
+
+            <TextView
+                android:id="@+id/txtStudentBirthday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="#555" />
+        </LinearLayout>
+
+        <!-- Dòng 4: Liên hệ (SĐT & Email - tự động ẩn View.GONE nếu sinh viên chưa cập nhật) -->
+        <TextView
+            android:id="@+id/txtStudentContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#444" />
+
+        <!-- Dòng 5: Địa chỉ -->
+        <TextView
+            android:id="@+id/txtStudentAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#777" />
+
+    </LinearLayout>
+</LinearLayout>

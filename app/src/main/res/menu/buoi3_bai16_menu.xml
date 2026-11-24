@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ⭐ QUAN TRỌNG [Buổi 3 - BT16]: File định nghĩa OptionsMenu cho Bài 16 (được nạp trong hàm onCreateOptionsMenu bằng getMenuInflater().inflate(R.menu.buoi3_bai16_menu, menu)) -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- ⭐ QUAN TRỌNG: Mỗi thẻ <item> bắt buộc có android:id để kiểm tra trong hàm onOptionsItemSelected(MenuItem item) -->
+    <item
+        android:id="@+id/mnuHoanThanh"
+        android:title="CV đã hoàn thành" />
+    <item
+        android:id="@+id/mnuChuaHoanThanh"
+        android:title="CV chưa hoàn thành" />
+    <item
+        android:id="@+id/mnuTatCa"
+        android:title="Tất cả công việc" />
+    <item
+        android:id="@+id/mnuXoaTatCa"
+        android:title="Xóa toàn bộ" />
+</menu>

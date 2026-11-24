@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ⭐ QUAN TRỌNG [Buổi 4 - BT19 MainMenu]: android:fillViewport="true" giúp nội dung bên trong ScrollView vẫn căn giữa đẹp mắt khi màn hình còn dư chỗ trống -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="#f5f5f5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎓 Hệ thống quản lý sinh viên"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#1565C0"
+            android:gravity="center"
+            android:paddingBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvWelcomeUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Xin chào, admin!"
+            android:textSize="14sp"
+            android:textColor="#555555"
+            android:gravity="center"
+            android:paddingBottom="16dp" />
+
+        <!-- ⭐ QUAN TRỌNG: Khung Dashboard hiển thị thống kê trực tiếp từ SQLite (được tự động cập nhật trong hàm onResume của Activity) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#E3F2FD"
+            android:padding="14dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📊 THỐNG KÊ TỔNG QUAN"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="#0D47A1"
+                android:paddingBottom="6dp" />
+
+            <TextView
+                android:id="@+id/tvStatsSummary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Đang tải thống kê..."
+                android:textSize="14sp"
+                android:lineSpacingExtra="4dp"
+                android:textColor="#333333" />
+        </LinearLayout>
+
+        <!-- ⭐ QUAN TRỌNG: Các nút điều hướng sang màn hình Quản lý Lớp học và Quản lý Sinh viên -->
+        <Button
+            android:id="@+id/btnOpenClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📚 Quản lý lớp học"
+            android:textAllCaps="false"
+            android:layout_marginBottom="12dp"
+            android:padding="14dp" />
+
+        <Button
+            android:id="@+id/btnOpenStudent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="👨‍🎓 Quản lý sinh viên"
+            android:textAllCaps="false"
+            android:layout_marginBottom="12dp"
+            android:padding="14dp" />
+
+        <Button
+            android:id="@+id/btnChangePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🔑 Đổi mật khẩu"
+            android:textAllCaps="false"
+            android:layout_marginBottom="12dp"
+            android:padding="14dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🔄 Đăng xuất"
+                android:textAllCaps="false"
+                android:padding="14dp"
+                android:layout_marginEnd="6dp"
+                android:background="#FF9800"
+                android:textColor="#fff" />
+
+            <Button
+                android:id="@+id/btnExitApp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🚪 Thoát"
+                android:textAllCaps="false"
+                android:padding="14dp"
+                android:layout_marginStart="6dp"
+                android:background="#f44336"
+                android:textColor="#fff" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

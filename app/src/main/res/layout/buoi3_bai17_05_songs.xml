@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#f5f5f5">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🎶 Quản lý bài hát"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chọn Album:"
+        android:textStyle="bold"
+        android:layout_marginTop="4dp" />
+
+    <!-- ⭐ QUAN TRỌNG [Buổi 3 - BT17]: Spinner chọn Album cha để lọc và thêm bài hát vào đúng Album đó -->
+    <Spinner
+        android:id="@+id/spnAlbum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_dropdown" />
+
+    <EditText
+        android:id="@+id/edtTenBaiHat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tên bài hát"
+        android:layout_marginTop="8dp" />
+
+    <EditText
+        android:id="@+id/edtTacGia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tác giả"
+        android:layout_marginTop="4dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="4dp">
+
+        <TextView
+            android:id="@+id/tvNgayRaDia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Ngày: chưa chọn"
+            android:layout_gravity="center_vertical"
+            android:padding="8dp" />
+
+        <Button
+            android:id="@+id/btnChonNgay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📅 Chọn ngày"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnThemBaiHat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="➕ Thêm bài hát"
+        android:textAllCaps="false"
+        android:layout_marginTop="8dp" />
+
+    <ListView
+        android:id="@+id/lvBaiHat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:divider="#BDBDBD"
+        android:dividerHeight="1dp" />
+
+</LinearLayout>

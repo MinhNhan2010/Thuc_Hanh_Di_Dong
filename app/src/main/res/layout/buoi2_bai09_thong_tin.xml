@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f5f5f5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bài 9: Thông tin cá nhân"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="8dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên người:"
+            android:layout_marginTop="12dp" />
+
+        <EditText
+            android:id="@+id/edtTen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập tên (ít nhất 3 ký tự)" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chứng minh nhân dân:"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/edtCMND"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập CMND (đúng 9 số)"
+            android:inputType="number" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bằng cấp:"
+            android:layout_marginTop="8dp" />
+
+        <!-- ⭐ QUAN TRỌNG [Buổi 2 - BT09]: RadioGroup gom nhóm các RadioButton để đảm bảo chỉ chọn được DUY NHẤT 1 bằng cấp tại một thời điểm -->
+        <RadioGroup
+            android:id="@+id/rgBangCap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbCaoDang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cao đẳng" />
+
+            <!-- ⭐ QUAN TRỌNG: android:checked="true" đặt "Đại học" được chọn mặc định khi vừa mở màn hình -->
+            <RadioButton
+                android:id="@+id/rbDaiHoc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Đại học"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rbThacSi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Thạc sĩ" />
+
+        </RadioGroup>
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sở thích (chọn ít nhất 1):"
+            android:layout_marginTop="8dp" />
+
+        <!-- ⭐ QUAN TRỌNG: Khác với RadioButton, các CheckBox hoạt động độc lập (cho phép chọn nhiều sở thích cùng lúc) -->
+        <CheckBox
+            android:id="@+id/chkDocSach"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Đọc sách" />
+
+        <CheckBox
+            android:id="@+id/chkTheThao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Thể thao" />
+
+        <CheckBox
+            android:id="@+id/chkDuLich"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Du lịch" />
+
+        <CheckBox
+            android:id="@+id/chkAmNhac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Âm nhạc" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thông tin bổ sung:"
+            android:layout_marginTop="8dp" />
+
+        <EditText
+            android:id="@+id/edtBoSung"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="(có thể để trống)"
+            android:minLines="2" />
+
+        <Button
+            android:id="@+id/btnGuiThongTin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gửi thông tin"
+            android:layout_marginTop="12dp"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+</ScrollView>
